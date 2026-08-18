@@ -4,39 +4,53 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>lesson 21</title>
-		<link rel="stylesheet" href="src/css/style.css" />
-		<script src="src/js/app.js" defer></script>
 	</head>
 	<body>
-		<section class="container">
-			<form id="signup-form" action="#" class="form" novalidate>
-				<h1>Form title</h1>
-				<div class="form-group">
-					<label for="user-name">user name</label>
-					<input type="text" id="user-name" required minlength="5" name="username" />
-					<span class="message"></span>
-				</div>
-				<div class="form-group">
-					<label for="user-email">user email</label>
-					<input type="email" id="user-email" required name="email" />
-					<span class="message"></span>
-				</div>
-				<div class="form-group">
-					<label for="user-age">user age</label>
-					<input type="number" id="user-age" min="10" max="50" required name="age" />
-					<span class="message"></span>
-				</div>
+		<form id="signup-form" action="#">
+			<h1>Form title</h1>
 
-				<button type="submit">submit</button>
-			</form>
-		</section>
-
-		<dialog>
-			<div class="dialog-content">
-				<h2>title</h2>
-				<p>message</p>
-				<button class="close">Close</button>
+			<div>
+				<label for="personal-number">personal number</label>
+				<input
+					type="text"
+					id="personal-number"
+					name="personal_number"
+					required
+					minlength="11"
+					maxlength="11"
+					inputmode="numeric"
+					pattern="\d{11}"
+					title="Must be exactly 11 digits"
+				/>
 			</div>
-		</dialog>
+
+			<div>
+				<label for="mobile-number">mobile number</label>
+				<input
+					type="text"
+					id="mobile-number"
+					name="mobile_number"
+					required
+					minlength="9"
+					maxlength="9"
+					inputmode="numeric"
+					pattern="\d{9}"
+					title="Must be exactly 9 digits"
+				/>
+			</div>
+
+			<div>
+				<label for="job-description">job description</label>
+				<textarea
+					id="job-description"
+					name="job_description"
+					required
+					maxlength="50"
+					rows="3"
+				></textarea>
+			</div>
+
+			<button type="submit">submit</button>
+		</form>
 	</body>
 </html>
